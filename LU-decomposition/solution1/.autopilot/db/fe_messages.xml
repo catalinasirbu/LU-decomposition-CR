@@ -1,0 +1,51 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/csynth.tcl:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=decompose" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=m offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=l offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=u offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=size bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=m block factor=8 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=l block factor=8 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=u block factor=8 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="decompose.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="decompose" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="decompose.cpp:37:13" msg_body="Loop 'update_u' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="update_u"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="decompose.cpp:5:0" msg_body="Applying array_partition to 'm': Block partitioning with factor 8 on dimension 2.">
+        <args Dim="2" Factor="8" Mode="Block" UOName="m"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="decompose.cpp:5:0" msg_body="Applying array_partition to 'l': Block partitioning with factor 8 on dimension 2.">
+        <args Dim="2" Factor="8" Mode="Block" UOName="l"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="decompose.cpp:5:0" msg_body="Applying array_partition to 'u': Block partitioning with factor 8 on dimension 2.">
+        <args Dim="2" Factor="8" Mode="Block" UOName="u"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

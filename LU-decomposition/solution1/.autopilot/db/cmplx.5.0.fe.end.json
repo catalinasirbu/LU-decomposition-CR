@@ -1,0 +1,39 @@
+{
+    "1": {
+        "name": "decompose_Pipeline_init_lu_VITIS_LOOP_18_1",
+        "file": "decompose.cpp",
+        "fileloc": "0",
+        "instructions": "423",
+        "total_instructions": "423",
+        "calls": "",
+        "basicblocks": "34",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "decompose",
+        "file": "decompose.cpp",
+        "fileloc": "5",
+        "instructions": "561",
+        "total_instructions": "984",
+        "calls": "1",
+        "basicblocks": "32",
+        "loads": {
+            "L": "8"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "1",
+            "N": "2"
+        }
+    }
+}

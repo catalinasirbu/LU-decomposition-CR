@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 62,
+    "calls": "",
+    "file": "decompose.cpp",
+    "fileloc": 5,
+    "instructions": 368,
+    "loads": {
+      "T": 40
+    },
+    "name": "decompose",
+    "stores": {
+      "T": 40
+    },
+    "total_instructions": 368
+  }
+}

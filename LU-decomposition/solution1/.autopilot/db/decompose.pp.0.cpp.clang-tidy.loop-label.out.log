@@ -1,0 +1,5 @@
+C:\Users\catal\Vivado\LU-decomposition\LU-decomposition\solution1\.autopilot\db\decompose.pp.0.cpp:187:9: warning: Added loop label VITIS_LOOP_18_1:   [xilinx-label-all-loops]
+        for (int j = 0; j < size; j++) {
+        ^~~
+        VITIS_LOOP_18_1: 
+C:\Users\catal\Vivado\LU-decomposition\LU-decomposition\solution1\.autopilot\db\decompose.pp.0.cpp:187:9: note: FIX-IT applied suggested code changes

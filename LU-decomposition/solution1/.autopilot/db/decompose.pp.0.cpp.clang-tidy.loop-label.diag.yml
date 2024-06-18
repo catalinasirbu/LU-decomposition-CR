@@ -1,0 +1,13 @@
+---
+MainSourceFile:  'C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_18_1:  '
+    FileOffset:      18
+    FilePath:        decompose.cpp
+    Replacements:    
+      - FilePath:        'C:\Users\catal\Vivado\LU-decomposition\LU-decomposition\solution1\.autopilot\db\decompose.pp.0.cpp'
+        Offset:          10649
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_18_1: '
+...

@@ -1,0 +1,849 @@
+INFO-FLOW: Workspace C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1 opened at Tue Jun 18 18:10:16 +0300 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 1.086 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.128 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.173 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.276 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 1.468 sec.
+Execute   set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+Execute     create_platform xc7z020clg400-1 -board  
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.132 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.159 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
+Execute     send_msg_by_id WARNING @200-1998@%s%s ../../test.cpp C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution C:/Users/catal/Vivado/LU-decomposition 
+WARNING: [HLS 200-1998] cannot find relative file path '../../test.cpp' in directory(s): C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution C:/Users/catal/Vivado/LU-decomposition
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+WARNING: [HLS 200-40] Cannot find source file main.cpp; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 96.543 MB.
+Execute       set_directive_top decompose -name=decompose 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO: [HLS 200-10] Analyzing design file 'decompose.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling decompose.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang decompose.cpp -foptimization-record-file=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -insert-hls-directive=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.cpp.clang.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.5 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/clang.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/.systemc_flag -fix-errors C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.214 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/all.directive.json -fix-errors C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.125 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.1 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp.clang-tidy.loop-label.err.log
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 0.125 sec.
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.bc {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp.clang.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.033 seconds; current allocated memory: 97.750 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.0.bc -args  "C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.g.bc"  
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.g.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.0.bc > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.1.lower.bc -args C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.1.lower.bc > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command       run_link_or_opt done; 0.137 sec.
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.2.m1.bc -args C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.2.m1.bc > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.081 sec.
+Execute       run_link_or_opt -opt -out C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=decompose -reflow-float-conversion 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=decompose -reflow-float-conversion -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.3.fpc.bc > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command       run_link_or_opt done; 0.892 sec.
+Execute       run_link_or_opt -out C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.4.m2.bc -args C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.4.m2.bc > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=decompose 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=decompose -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.5.gdce.bc > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=decompose -mllvm -hls-db-dir -mllvm C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1024 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=1024 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.out.log 2> C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log
+INFO: [HLS 214-291] Loop 'update_u' is marked as complete unroll implied by the pipeline pragma (decompose.cpp:37:13)
+INFO: [HLS 214-248] Applying array_partition to 'm': Block partitioning with factor 8 on dimension 2. (decompose.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'l': Block partitioning with factor 8 on dimension 2. (decompose.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'u': Block partitioning with factor 8 on dimension 2. (decompose.cpp:5:0)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.245 seconds; current allocated memory: 100.621 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 100.621 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top decompose -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.0.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.202 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.227 seconds; current allocated memory: 107.195 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.1.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 108.926 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.g.1.bc to C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.o.1.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'update_l' (decompose.cpp:32) in function 'decompose' for pipelining.
+WARNING: [HLS 200-932] Cannot unroll loop 'update_u' (decompose.cpp:37) in function 'decompose' completely: variable loop bound.
+Command         transform done; 0.2 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.287 seconds; current allocated memory: 133.125 MB.
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.o.2.bc -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'init_lu' (decompose.cpp:17:5) in function 'decompose'.
+WARNING: [HLS 200-960] Cannot flatten loop 'update_l' (decompose.cpp:32:9) in function 'decompose' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'lu_decompose' (decompose.cpp:30:5) in function 'decompose' the outer loop is not a perfect loop.
+Execute           auto_get_db
+Command         transform done; 0.375 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.376 seconds; current allocated memory: 140.645 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.971 sec.
+Command     elaborate done; 8.286 sec.
+Execute     ap_eval exec zip -j C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Command     ap_eval done; 0.189 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'decompose' ...
+Execute       ap_set_top_model decompose 
+Execute       get_model_list decompose -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model decompose 
+Execute       preproc_iomode -model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+Execute       get_model_list decompose -filter all-wo-channel 
+INFO-FLOW: Model list for configure: decompose_Pipeline_init_lu_VITIS_LOOP_18_1 decompose
+INFO-FLOW: Configuring Module : decompose_Pipeline_init_lu_VITIS_LOOP_18_1 ...
+Execute       set_default_model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+Execute       apply_spec_resource_limit decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+INFO-FLOW: Configuring Module : decompose ...
+Execute       set_default_model decompose 
+Execute       apply_spec_resource_limit decompose 
+INFO-FLOW: Model list for preprocess: decompose_Pipeline_init_lu_VITIS_LOOP_18_1 decompose
+INFO-FLOW: Preprocessing Module: decompose_Pipeline_init_lu_VITIS_LOOP_18_1 ...
+Execute       set_default_model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+Execute       cdfg_preprocess -model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+Execute       rtl_gen_preprocess decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+INFO-FLOW: Preprocessing Module: decompose ...
+Execute       set_default_model decompose 
+Execute       cdfg_preprocess -model decompose 
+Execute       rtl_gen_preprocess decompose 
+INFO-FLOW: Model list for synthesis: decompose_Pipeline_init_lu_VITIS_LOOP_18_1 decompose
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+Execute       schedule -model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'init_lu_VITIS_LOOP_18_1'.
+WARNING: [HLS 200-885] The II Violation in module 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1' (loop 'init_lu_VITIS_LOOP_18_1'): Unable to schedule bus request operation ('gmem_6_addr_8_req', decompose.cpp:24) on port 'gmem_6' (decompose.cpp:24) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 55, loop 'init_lu_VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 2.012 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.392 seconds; current allocated memory: 151.246 MB.
+Execute       syn_report -verbosereport -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Command       syn_report done; 0.608 sec.
+Execute       db_write -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.sched.adb -f 
+INFO-FLOW: Finish scheduling decompose_Pipeline_init_lu_VITIS_LOOP_18_1.
+Execute       set_default_model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+Execute       bind -model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.416 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.118 seconds; current allocated memory: 152.352 MB.
+Execute       syn_report -verbosereport -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Command       syn_report done; 0.282 sec.
+Execute       db_write -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.bind.adb -f 
+Command       db_write done; 0.107 sec.
+INFO-FLOW: Finish binding decompose_Pipeline_init_lu_VITIS_LOOP_18_1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decompose' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model decompose 
+Execute       schedule -model decompose 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'update_l': contains subloop(s) that are not unrolled or flattened.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 2.273 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.686 seconds; current allocated memory: 158.984 MB.
+Execute       syn_report -verbosereport -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Command       syn_report done; 1.943 sec.
+Execute       db_write -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.sched.adb -f 
+INFO-FLOW: Finish scheduling decompose.
+Execute       set_default_model decompose 
+Execute       bind -model decompose 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1.335 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.379 seconds; current allocated memory: 159.160 MB.
+Execute       syn_report -verbosereport -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Command       syn_report done; 0.638 sec.
+Execute       db_write -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.bind.adb -f 
+Command       db_write done; 0.138 sec.
+INFO-FLOW: Finish binding decompose.
+Execute       get_model_list decompose -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+Execute       rtl_gen_preprocess decompose 
+INFO-FLOW: Model list for RTL generation: decompose_Pipeline_init_lu_VITIS_LOOP_18_1 decompose
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 -top_prefix decompose_ -sub_prefix decompose_ -mg_file C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.compgen.tcl 
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'init_lu_VITIS_LOOP_18_1' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1' pipeline 'init_lu_VITIS_LOOP_18_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_31ns_13ns_43_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_31ns_33ns_44_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_8_3_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_31ns_11ns_10_35_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1'.
+Command       create_rtl_model done; 0.73 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.543 seconds; current allocated memory: 165.488 MB.
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute       gen_rtl decompose_Pipeline_init_lu_VITIS_LOOP_18_1 -style xilinx -f -lang vhdl -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/vhdl/decompose_decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+Execute       gen_rtl decompose_Pipeline_init_lu_VITIS_LOOP_18_1 -style xilinx -f -lang vlog -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/verilog/decompose_decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+Execute       syn_report -csynth -model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/report/decompose_Pipeline_init_lu_VITIS_LOOP_18_1_csynth.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Command       syn_report done; 1.045 sec.
+Execute       syn_report -rtlxml -model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/report/decompose_Pipeline_init_lu_VITIS_LOOP_18_1_csynth.xml 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Command       syn_report done; 0.505 sec.
+Execute       syn_report -verbosereport -model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.verbose.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Command       syn_report done; 0.926 sec.
+Execute       db_write -model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 -f -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.adb 
+Command       db_write done; 0.659 sec.
+Execute       db_write -model decompose_Pipeline_init_lu_VITIS_LOOP_18_1 -bindview -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info decompose_Pipeline_init_lu_VITIS_LOOP_18_1 -p C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decompose' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model decompose -top_prefix  -sub_prefix decompose_ -mg_file C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_4' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_5' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_6' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_7' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_4' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_5' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_6' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_7' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_4' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_5' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_6' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_7' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_4' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_5' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_6' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_7' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'decompose' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'size' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Bundling port 'm_0', 'm_1', 'm_2', 'm_3', 'm_4', 'm_5', 'm_6', 'm_7', 'l_0', 'l_1', 'l_2', 'l_3', 'l_4', 'l_5', 'l_6', 'l_7', 'u_0', 'u_1', 'u_2', 'u_3', 'u_4', 'u_5', 'u_6' and 'u_7' to AXI-Lite port control_r.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_31ns_31ns_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_44ns_46ns_57_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_77_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_13ns_64_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_8_3_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_44ns_11ns_10_48_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_11ns_10_68_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decompose'.
+Command       create_rtl_model done; 1.014 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.786 seconds; current allocated memory: 183.355 MB.
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute       gen_rtl decompose -istop -style xilinx -f -lang vhdl -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/vhdl/decompose 
+Command       gen_rtl done; 0.25 sec.
+Execute       gen_rtl decompose -istop -style xilinx -f -lang vlog -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/verilog/decompose 
+Command       gen_rtl done; 0.106 sec.
+Execute       syn_report -csynth -model decompose -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/report/decompose_csynth.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Command       syn_report done; 0.112 sec.
+Execute       syn_report -rtlxml -model decompose -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/report/decompose_csynth.xml 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute       syn_report -verbosereport -model decompose -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.verbose.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Command       syn_report done; 0.842 sec.
+Execute       db_write -model decompose -f -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.adb 
+Command       db_write done; 0.283 sec.
+Execute       db_write -model decompose -bindview -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info decompose -p C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose 
+Execute       export_constraint_db -f -tool general -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.constraint.tcl 
+Execute       syn_report -designview -model decompose -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.design.xml 
+Command       syn_report done; 1.252 sec.
+Execute       syn_report -csynthDesign -model decompose -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/report/csynth.rpt -MHOut C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute       syn_report -wcfg -model decompose -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model decompose -o C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.protoinst 
+Execute       sc_get_clocks decompose 
+Execute       sc_get_portdomain decompose 
+INFO-FLOW: Model list for RTL component generation: decompose_Pipeline_init_lu_VITIS_LOOP_18_1 decompose
+INFO-FLOW: Handling components in module [decompose_Pipeline_init_lu_VITIS_LOOP_18_1] ... 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.compgen.tcl 
+INFO-FLOW: Found component decompose_mul_31ns_13ns_43_2_1.
+INFO-FLOW: Append model decompose_mul_31ns_13ns_43_2_1
+INFO-FLOW: Found component decompose_mul_31ns_33ns_44_2_1.
+INFO-FLOW: Append model decompose_mul_31ns_33ns_44_2_1
+INFO-FLOW: Found component decompose_urem_31ns_11ns_10_35_1.
+INFO-FLOW: Append model decompose_urem_31ns_11ns_10_35_1
+INFO-FLOW: Found component decompose_mux_8_3_32_1_1.
+INFO-FLOW: Append model decompose_mux_8_3_32_1_1
+INFO-FLOW: Found component decompose_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model decompose_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [decompose] ... 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.tcl 
+INFO-FLOW: Found component decompose_fsub_32ns_32ns_32_5_full_dsp_1.
+INFO-FLOW: Append model decompose_fsub_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: Found component decompose_fmul_32ns_32ns_32_4_max_dsp_1.
+INFO-FLOW: Append model decompose_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: Found component decompose_fdiv_32ns_32ns_32_16_no_dsp_1.
+INFO-FLOW: Append model decompose_fdiv_32ns_32ns_32_16_no_dsp_1
+INFO-FLOW: Found component decompose_mul_31ns_31ns_62_2_1.
+INFO-FLOW: Append model decompose_mul_31ns_31ns_62_2_1
+INFO-FLOW: Found component decompose_mul_44ns_46ns_57_5_1.
+INFO-FLOW: Append model decompose_mul_44ns_46ns_57_5_1
+INFO-FLOW: Found component decompose_mul_64ns_66ns_77_5_1.
+INFO-FLOW: Append model decompose_mul_64ns_66ns_77_5_1
+INFO-FLOW: Found component decompose_mul_64s_13ns_64_5_1.
+INFO-FLOW: Append model decompose_mul_64s_13ns_64_5_1
+INFO-FLOW: Found component decompose_urem_44ns_11ns_10_48_seq_1.
+INFO-FLOW: Append model decompose_urem_44ns_11ns_10_48_seq_1
+INFO-FLOW: Found component decompose_urem_64ns_11ns_10_68_1.
+INFO-FLOW: Append model decompose_urem_64ns_11ns_10_68_1
+INFO-FLOW: Found component decompose_gmem_0_m_axi.
+INFO-FLOW: Append model decompose_gmem_0_m_axi
+INFO-FLOW: Found component decompose_gmem_1_m_axi.
+INFO-FLOW: Append model decompose_gmem_1_m_axi
+INFO-FLOW: Found component decompose_gmem_2_m_axi.
+INFO-FLOW: Append model decompose_gmem_2_m_axi
+INFO-FLOW: Found component decompose_gmem_3_m_axi.
+INFO-FLOW: Append model decompose_gmem_3_m_axi
+INFO-FLOW: Found component decompose_gmem_4_m_axi.
+INFO-FLOW: Append model decompose_gmem_4_m_axi
+INFO-FLOW: Found component decompose_gmem_5_m_axi.
+INFO-FLOW: Append model decompose_gmem_5_m_axi
+INFO-FLOW: Found component decompose_gmem_6_m_axi.
+INFO-FLOW: Append model decompose_gmem_6_m_axi
+INFO-FLOW: Found component decompose_gmem_7_m_axi.
+INFO-FLOW: Append model decompose_gmem_7_m_axi
+INFO-FLOW: Found component decompose_control_s_axi.
+INFO-FLOW: Append model decompose_control_s_axi
+INFO-FLOW: Found component decompose_control_r_s_axi.
+INFO-FLOW: Append model decompose_control_r_s_axi
+INFO-FLOW: Append model decompose_Pipeline_init_lu_VITIS_LOOP_18_1
+INFO-FLOW: Append model decompose
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: decompose_mul_31ns_13ns_43_2_1 decompose_mul_31ns_33ns_44_2_1 decompose_urem_31ns_11ns_10_35_1 decompose_mux_8_3_32_1_1 decompose_flow_control_loop_pipe_sequential_init decompose_fsub_32ns_32ns_32_5_full_dsp_1 decompose_fmul_32ns_32ns_32_4_max_dsp_1 decompose_fdiv_32ns_32ns_32_16_no_dsp_1 decompose_mul_31ns_31ns_62_2_1 decompose_mul_44ns_46ns_57_5_1 decompose_mul_64ns_66ns_77_5_1 decompose_mul_64s_13ns_64_5_1 decompose_urem_44ns_11ns_10_48_seq_1 decompose_urem_64ns_11ns_10_68_1 decompose_gmem_0_m_axi decompose_gmem_1_m_axi decompose_gmem_2_m_axi decompose_gmem_3_m_axi decompose_gmem_4_m_axi decompose_gmem_5_m_axi decompose_gmem_6_m_axi decompose_gmem_7_m_axi decompose_control_s_axi decompose_control_r_s_axi decompose_Pipeline_init_lu_VITIS_LOOP_18_1 decompose
+INFO-FLOW: Generating C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model decompose_mul_31ns_13ns_43_2_1
+INFO-FLOW: To file: write model decompose_mul_31ns_33ns_44_2_1
+INFO-FLOW: To file: write model decompose_urem_31ns_11ns_10_35_1
+INFO-FLOW: To file: write model decompose_mux_8_3_32_1_1
+INFO-FLOW: To file: write model decompose_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model decompose_fsub_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: To file: write model decompose_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: To file: write model decompose_fdiv_32ns_32ns_32_16_no_dsp_1
+INFO-FLOW: To file: write model decompose_mul_31ns_31ns_62_2_1
+INFO-FLOW: To file: write model decompose_mul_44ns_46ns_57_5_1
+INFO-FLOW: To file: write model decompose_mul_64ns_66ns_77_5_1
+INFO-FLOW: To file: write model decompose_mul_64s_13ns_64_5_1
+INFO-FLOW: To file: write model decompose_urem_44ns_11ns_10_48_seq_1
+INFO-FLOW: To file: write model decompose_urem_64ns_11ns_10_68_1
+INFO-FLOW: To file: write model decompose_gmem_0_m_axi
+INFO-FLOW: To file: write model decompose_gmem_1_m_axi
+INFO-FLOW: To file: write model decompose_gmem_2_m_axi
+INFO-FLOW: To file: write model decompose_gmem_3_m_axi
+INFO-FLOW: To file: write model decompose_gmem_4_m_axi
+INFO-FLOW: To file: write model decompose_gmem_5_m_axi
+INFO-FLOW: To file: write model decompose_gmem_6_m_axi
+INFO-FLOW: To file: write model decompose_gmem_7_m_axi
+INFO-FLOW: To file: write model decompose_control_s_axi
+INFO-FLOW: To file: write model decompose_control_r_s_axi
+INFO-FLOW: To file: write model decompose_Pipeline_init_lu_VITIS_LOOP_18_1
+INFO-FLOW: To file: write model decompose
+INFO-FLOW: Generating C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.117 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/vhdl' dstVlogDir='C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/vlog' tclDir='C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db' modelList='decompose_mul_31ns_13ns_43_2_1
+decompose_mul_31ns_33ns_44_2_1
+decompose_urem_31ns_11ns_10_35_1
+decompose_mux_8_3_32_1_1
+decompose_flow_control_loop_pipe_sequential_init
+decompose_fsub_32ns_32ns_32_5_full_dsp_1
+decompose_fmul_32ns_32ns_32_4_max_dsp_1
+decompose_fdiv_32ns_32ns_32_16_no_dsp_1
+decompose_mul_31ns_31ns_62_2_1
+decompose_mul_44ns_46ns_57_5_1
+decompose_mul_64ns_66ns_77_5_1
+decompose_mul_64s_13ns_64_5_1
+decompose_urem_44ns_11ns_10_48_seq_1
+decompose_urem_64ns_11ns_10_68_1
+decompose_gmem_0_m_axi
+decompose_gmem_1_m_axi
+decompose_gmem_2_m_axi
+decompose_gmem_3_m_axi
+decompose_gmem_4_m_axi
+decompose_gmem_5_m_axi
+decompose_gmem_6_m_axi
+decompose_gmem_7_m_axi
+decompose_control_s_axi
+decompose_control_r_s_axi
+decompose_Pipeline_init_lu_VITIS_LOOP_18_1
+decompose
+' expOnly='0'
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.tcl 
+Execute         source ./control.slave.tcl 
+Execute         source ./control.slave.tcl 
+Execute         source ./control_r.slave.tcl 
+Command       ap_source done; 0.134 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.841 seconds; current allocated memory: 196.648 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='decompose_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.4 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='decompose_mul_31ns_13ns_43_2_1
+decompose_mul_31ns_33ns_44_2_1
+decompose_urem_31ns_11ns_10_35_1
+decompose_mux_8_3_32_1_1
+decompose_flow_control_loop_pipe_sequential_init
+decompose_fsub_32ns_32ns_32_5_full_dsp_1
+decompose_fmul_32ns_32ns_32_4_max_dsp_1
+decompose_fdiv_32ns_32ns_32_16_no_dsp_1
+decompose_mul_31ns_31ns_62_2_1
+decompose_mul_44ns_46ns_57_5_1
+decompose_mul_64ns_66ns_77_5_1
+decompose_mul_64s_13ns_64_5_1
+decompose_urem_44ns_11ns_10_48_seq_1
+decompose_urem_64ns_11ns_10_68_1
+decompose_gmem_0_m_axi
+decompose_gmem_1_m_axi
+decompose_gmem_2_m_axi
+decompose_gmem_3_m_axi
+decompose_gmem_4_m_axi
+decompose_gmem_5_m_axi
+decompose_gmem_6_m_axi
+decompose_gmem_7_m_axi
+decompose_control_s_axi
+decompose_control_r_s_axi
+decompose_Pipeline_init_lu_VITIS_LOOP_18_1
+decompose
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.tbgen.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.constraint.tcl 
+Execute       sc_get_clocks decompose 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/impl/misc/decompose_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/impl/misc/decompose_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl 
+Execute       source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/impl/misc/decompose_fsub_32ns_32ns_32_5_full_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_r_s_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME control_r DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_0_m_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME gmem_0 DSP 0 BRAM 4 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_1_m_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME gmem_1 DSP 0 BRAM 4 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_2_m_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME gmem_2 DSP 0 BRAM 4 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_3_m_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME gmem_3 DSP 0 BRAM 4 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_4_m_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME gmem_4 DSP 0 BRAM 4 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_5_m_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME gmem_5 DSP 0 BRAM 4 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_6_m_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME gmem_6 DSP 0 BRAM 4 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_7_m_axi_U SOURCE {} VARIABLE {} MODULE decompose LOOP {} BUNDLEDNAME gmem_7 DSP 0 BRAM 4 URAM 0}} report_dict {TOPINST decompose MODULE2INSTS {decompose decompose decompose_Pipeline_init_lu_VITIS_LOOP_18_1 grp_decompose_Pipeline_init_lu_VITIS_LOOP_18_1_fu_1062} INST2MODULE {decompose decompose grp_decompose_Pipeline_init_lu_VITIS_LOOP_18_1_fu_1062 decompose_Pipeline_init_lu_VITIS_LOOP_18_1} INSTDATA {decompose {DEPTH 1 CHILDREN grp_decompose_Pipeline_init_lu_VITIS_LOOP_18_1_fu_1062} grp_decompose_Pipeline_init_lu_VITIS_LOOP_18_1_fu_1062 {DEPTH 2 CHILDREN {}}} MODULEDATA {decompose_Pipeline_init_lu_VITIS_LOOP_18_1 {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_31ns_13ns_43_2_1_U1 SOURCE decompose.cpp:17 VARIABLE empty LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_59_fu_1375_p2 SOURCE decompose.cpp:17 VARIABLE empty_59 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_61_fu_1709_p2 SOURCE decompose.cpp:17 VARIABLE empty_61 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_62_fu_1380_p2 SOURCE decompose.cpp:17 VARIABLE empty_62 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_63_fu_1714_p2 SOURCE decompose.cpp:17 VARIABLE empty_63 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_64_fu_1385_p2 SOURCE decompose.cpp:17 VARIABLE empty_64 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_65_fu_1719_p2 SOURCE decompose.cpp:17 VARIABLE empty_65 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_66_fu_1390_p2 SOURCE decompose.cpp:17 VARIABLE empty_66 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_67_fu_1724_p2 SOURCE decompose.cpp:17 VARIABLE empty_67 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_68_fu_1395_p2 SOURCE decompose.cpp:17 VARIABLE empty_68 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_69_fu_1729_p2 SOURCE decompose.cpp:17 VARIABLE empty_69 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_70_fu_1400_p2 SOURCE decompose.cpp:17 VARIABLE empty_70 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_71_fu_1734_p2 SOURCE decompose.cpp:17 VARIABLE empty_71 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_72_fu_1405_p2 SOURCE decompose.cpp:17 VARIABLE empty_72 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_73_fu_1739_p2 SOURCE decompose.cpp:17 VARIABLE empty_73 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_74_fu_1410_p2 SOURCE decompose.cpp:17 VARIABLE empty_74 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_75_fu_1744_p2 SOURCE decompose.cpp:17 VARIABLE empty_75 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln17_fu_1020_p2 SOURCE decompose.cpp:17 VARIABLE add_ln17 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_1040_p0 SOURCE decompose.cpp:17 VARIABLE add_ln17_1 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_31ns_33ns_44_2_1_U2 SOURCE decompose.cpp:17 VARIABLE mul_ln17_1 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_31ns_13ns_43_2_1_U1 SOURCE decompose.cpp:17 VARIABLE p_mid1 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1299_fu_1418_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1299 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1303_fu_1769_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1303 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1305_fu_1423_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1305 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1307_fu_1786_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1307 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1309_fu_1428_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1309 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1311_fu_1803_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1311 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1313_fu_1433_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1313 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1315_fu_1820_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1315 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1317_fu_1438_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1317 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1319_fu_1837_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1319 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1321_fu_1443_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1321 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1323_fu_1854_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1323 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1325_fu_1448_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1325 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1327_fu_1871_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1327 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1329_fu_1453_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1329 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid1331_fu_1888_p2 SOURCE decompose.cpp:17 VARIABLE p_mid1331 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_31ns_33ns_44_2_1_U2 SOURCE decompose.cpp:18 VARIABLE mul_ln18 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_fu_1949_p2 SOURCE decompose.cpp:24 VARIABLE add_ln24 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_1_fu_1954_p2 SOURCE decompose.cpp:24 VARIABLE add_ln24_1 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_2_fu_1959_p2 SOURCE decompose.cpp:24 VARIABLE add_ln24_2 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_3_fu_1964_p2 SOURCE decompose.cpp:24 VARIABLE add_ln24_3 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_4_fu_1969_p2 SOURCE decompose.cpp:24 VARIABLE add_ln24_4 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_5_fu_1974_p2 SOURCE decompose.cpp:24 VARIABLE add_ln24_5 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_6_fu_1979_p2 SOURCE decompose.cpp:24 VARIABLE add_ln24_6 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_7_fu_1984_p2 SOURCE decompose.cpp:24 VARIABLE add_ln24_7 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln18_fu_1068_p2 SOURCE decompose.cpp:18 VARIABLE add_ln18 LOOP init_lu_VITIS_LOOP_18_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 6 BRAM 0 URAM 0}} decompose {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_31ns_31ns_62_2_1_U64 SOURCE decompose.cpp:17 VARIABLE mul_ln17 LOOP {} BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_fu_1353_p2 SOURCE decompose.cpp:32 VARIABLE add_ln32 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_5_fu_1397_p2 SOURCE decompose.cpp:32 VARIABLE add_ln32_5 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_6_fu_1403_p2 SOURCE decompose.cpp:32 VARIABLE add_ln32_6 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_2_fu_1414_p2 SOURCE decompose.cpp:32 VARIABLE add_ln32_2 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_44ns_46ns_57_5_1_U65 SOURCE decompose.cpp:30 VARIABLE mul_ln30 LOOP lu_decompose BUNDLEDNAME {} DSP 8 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_fu_1476_p2 SOURCE decompose.cpp:30 VARIABLE add_ln30 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_1_fu_1481_p2 SOURCE decompose.cpp:30 VARIABLE add_ln30_1 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_2_fu_1486_p2 SOURCE decompose.cpp:30 VARIABLE add_ln30_2 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_3_fu_1491_p2 SOURCE decompose.cpp:30 VARIABLE add_ln30_3 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_4_fu_1496_p2 SOURCE decompose.cpp:30 VARIABLE add_ln30_4 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_5_fu_1501_p2 SOURCE decompose.cpp:30 VARIABLE add_ln30_5 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_6_fu_1506_p2 SOURCE decompose.cpp:30 VARIABLE add_ln30_6 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_7_fu_1511_p2 SOURCE decompose.cpp:30 VARIABLE add_ln30_7 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_1_fu_1521_p2 SOURCE decompose.cpp:32 VARIABLE add_ln32_1 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_64s_13ns_64_5_1_U67 SOURCE decompose.cpp:34 VARIABLE mul_ln34 LOOP update_l BUNDLEDNAME {} DSP 4 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_fu_1728_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_1_fu_1748_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_1 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_2_fu_1754_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_2 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_3_fu_1758_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_3 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_4_fu_1764_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_4 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_5_fu_1768_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_5 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_6_fu_1774_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_6 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_7_fu_1778_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_7 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_8_fu_1784_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_8 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_9_fu_1788_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_9 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_10_fu_1794_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_10 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_11_fu_1798_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_11 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_12_fu_1804_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_12 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_13_fu_1808_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_13 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_14_fu_1814_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_14 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_15_fu_1818_p2 SOURCE decompose.cpp:34 VARIABLE add_ln34_15 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 15 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_16_no_dsp_1_U63 SOURCE decompose.cpp:34 VARIABLE factor LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL auto LATENCY 4 OPTYPE mul PRAGMA {} RTLNAME mul_64ns_66ns_77_5_1_U66 SOURCE decompose.cpp:37 VARIABLE mul_ln37 LOOP update_u BUNDLEDNAME {} DSP 13 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_fu_2360_p2 SOURCE decompose.cpp:39 VARIABLE add_ln39 LOOP update_u BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_1_fu_2365_p2 SOURCE decompose.cpp:39 VARIABLE add_ln39_1 LOOP update_u BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_2_fu_2370_p2 SOURCE decompose.cpp:39 VARIABLE add_ln39_2 LOOP update_u BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_3_fu_2375_p2 SOURCE decompose.cpp:39 VARIABLE add_ln39_3 LOOP update_u BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_4_fu_2380_p2 SOURCE decompose.cpp:39 VARIABLE add_ln39_4 LOOP update_u BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_5_fu_2385_p2 SOURCE decompose.cpp:39 VARIABLE add_ln39_5 LOOP update_u BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_6_fu_2390_p2 SOURCE decompose.cpp:39 VARIABLE add_ln39_6 LOOP update_u BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_7_fu_2395_p2 SOURCE decompose.cpp:39 VARIABLE add_ln39_7 LOOP update_u BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U62 SOURCE decompose.cpp:39 VARIABLE mul LOOP update_u BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 4 OPTYPE fsub PRAGMA {} RTLNAME fsub_32ns_32ns_32_5_full_dsp_1_U61 SOURCE decompose.cpp:39 VARIABLE sub LOOP update_u BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fsub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln37_fu_2909_p2 SOURCE decompose.cpp:37 VARIABLE add_ln37 LOOP update_u BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_4_fu_2339_p2 SOURCE decompose.cpp:32 VARIABLE add_ln32_4 LOOP update_l BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_8_fu_1695_p2 SOURCE decompose.cpp:30 VARIABLE add_ln30_8 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln32_3_fu_1701_p2 SOURCE decompose.cpp:32 VARIABLE add_ln32_3 LOOP lu_decompose BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 40 BRAM 32 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 6.296 seconds; current allocated memory: 211.621 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for decompose.
+INFO: [VLOG 209-307] Generating Verilog RTL for decompose.
+Execute       syn_report -model decompose -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+Command     autosyn done; 26.934 sec.
+Command   csynth_design done; 35.541 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 24 seconds. CPU system time: 2 seconds. Elapsed time: 35.541 seconds; current allocated memory: 115.316 MB.
+Command ap_source done; 37.245 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1 opened at Tue Jun 18 18:15:53 +0300 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 0.838 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.102 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.136 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_export -output=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition 
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition
+Execute     config_export -output=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition 
+Command   open_solution done; 1.168 sec.
+Execute   set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+Execute     create_platform xc7z020clg400-1 -board  
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.131 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.162 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   config_export -output C:/Users/catal/Vivado/LU-decomposition/LU-decomposition 
+INFO: [HLS 200-1510] Running: config_export -output C:/Users/catal/Vivado/LU-decomposition/LU-decomposition 
+Execute   export_design -rtl verilog -format ip_catalog -output C:/Users/catal/Vivado/LU-decomposition/LU-decomposition 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/catal/Vivado/LU-decomposition/LU-decomposition 
+Execute     config_export -format=ip_catalog -output=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.122 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=decompose xml_exists=0
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to decompose
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=33
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=26 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='decompose_mul_31ns_13ns_43_2_1
+decompose_mul_31ns_33ns_44_2_1
+decompose_urem_31ns_11ns_10_35_1
+decompose_mux_8_3_32_1_1
+decompose_flow_control_loop_pipe_sequential_init
+decompose_fsub_32ns_32ns_32_5_full_dsp_1
+decompose_fmul_32ns_32ns_32_4_max_dsp_1
+decompose_fdiv_32ns_32ns_32_16_no_dsp_1
+decompose_mul_31ns_31ns_62_2_1
+decompose_mul_44ns_46ns_57_5_1
+decompose_mul_64ns_66ns_77_5_1
+decompose_mul_64s_13ns_64_5_1
+decompose_urem_44ns_11ns_10_48_seq_1
+decompose_urem_64ns_11ns_10_68_1
+decompose_gmem_0_m_axi
+decompose_gmem_1_m_axi
+decompose_gmem_2_m_axi
+decompose_gmem_3_m_axi
+decompose_gmem_4_m_axi
+decompose_gmem_5_m_axi
+decompose_gmem_6_m_axi
+decompose_gmem_7_m_axi
+decompose_control_s_axi
+decompose_control_r_s_axi
+decompose_Pipeline_init_lu_VITIS_LOOP_18_1
+decompose
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/top-io-be.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose_Pipeline_init_lu_VITIS_LOOP_18_1.tbgen.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.constraint.tcl 
+Execute     sc_get_clocks decompose 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/impl/misc/decompose_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/impl/misc/decompose_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/impl/misc/decompose_fsub_32ns_32ns_32_5_full_dsp_1_ip.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to decompose
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/driver
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.compgen.dataonly.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=decompose
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.constraint.tcl 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/decompose.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.118 sec.
+INFO-FLOW: DBG:PUTS:     IP package: exec C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/impl/ip/pack.bat
+INFO-FLOW: DBG:PUTS:     IP package: success C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution1/impl/ip/pack.bat
+Execute     send_msg_by_id INFO @200-802@%s LU-decomposition/export.zip 
+INFO: [HLS 200-802] Generated output file LU-decomposition/export.zip
+Command   export_design done; 54.463 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 54.463 seconds; current allocated memory: 16.605 MB.
+Command ap_source done; 55.891 sec.
+Execute cleanup_all 

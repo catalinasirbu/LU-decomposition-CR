@@ -1,0 +1,4 @@
+dict set slaves control_r {ports {m_0 {type i_ap_none width 64} m_1 {type i_ap_none width 64} m_2 {type i_ap_none width 64} m_3 {type i_ap_none width 64} m_4 {type i_ap_none width 64} m_5 {type i_ap_none width 64} m_6 {type i_ap_none width 64} m_7 {type i_ap_none width 64} l_0 {type i_ap_none width 64} l_1 {type i_ap_none width 64} l_2 {type i_ap_none width 64} l_3 {type i_ap_none width 64} l_4 {type i_ap_none width 64} l_5 {type i_ap_none width 64} l_6 {type i_ap_none width 64} l_7 {type i_ap_none width 64} u_0 {type i_ap_none width 64} u_1 {type i_ap_none width 64} u_2 {type i_ap_none width 64} u_3 {type i_ap_none width 64} u_4 {type i_ap_none width 64} u_5 {type i_ap_none width 64} u_6 {type i_ap_none width 64} u_7 {type i_ap_none width 64}} mems {} has_ctrl 0}
+set datawidth 32
+set addrwidth 64
+set intr_clr_mode TOW

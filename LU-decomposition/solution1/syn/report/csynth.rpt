@@ -1,0 +1,420 @@
+
+
+================================================================
+== Synthesis Summary Report of 'decompose'
+================================================================
++ General Information: 
+    * Date:           Tue Jun 18 18:10:45 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        LU-decomposition
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------+------+------+---------+--------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+    |                    Modules                    | Issue|      | Latency | Latency| Iteration|         | Trip |          |          |          |             |             |     |
+    |                    & Loops                    | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |      FF     |     LUT     | URAM|
+    +-----------------------------------------------+------+------+---------+--------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+    |+ decompose                                    |     -|  0.00|        -|       -|         -|        -|     -|        no|  32 (11%)|  40 (18%)|  40027 (37%)|  38912 (73%)|    -|
+    | + decompose_Pipeline_init_lu_VITIS_LOOP_18_1  |     -|  0.00|        -|       -|         -|        -|     -|        no|         -|    6 (2%)|  11684 (10%)|  13125 (24%)|    -|
+    |  o init_lu_VITIS_LOOP_18_1                    |    II|  7.30|        -|       -|        54|        2|     -|       yes|         -|         -|            -|            -|    -|
+    | o lu_decompose                                |     -|  7.30|        -|       -|         -|        -|     -|        no|         -|         -|            -|            -|    -|
+    |  o update_l                                   |     -|  7.30|        -|       -|         -|        -|     -|        no|         -|         -|            -|            -|    -|
+    |   o update_u                                  |     -|  7.30|        -|       -|        96|        -|     -|        no|         -|         -|            -|            -|    -|
+    +-----------------------------------------------+------+------+---------+--------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface    | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|              | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem_0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem_1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem_2 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem_3 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem_4 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem_5 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem_6 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem_7 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++--------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 5             | 16     | 0        |
+| s_axi_control_r | 32         | 9             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control   | size     | 0x10   | 32    | W      | Data signal of size              |                                                                      |
+| s_axi_control_r | m_0_1    | 0x10   | 32    | W      | Data signal of m_0               |                                                                      |
+| s_axi_control_r | m_0_2    | 0x14   | 32    | W      | Data signal of m_0               |                                                                      |
+| s_axi_control_r | m_1_1    | 0x1c   | 32    | W      | Data signal of m_1               |                                                                      |
+| s_axi_control_r | m_1_2    | 0x20   | 32    | W      | Data signal of m_1               |                                                                      |
+| s_axi_control_r | m_2_1    | 0x28   | 32    | W      | Data signal of m_2               |                                                                      |
+| s_axi_control_r | m_2_2    | 0x2c   | 32    | W      | Data signal of m_2               |                                                                      |
+| s_axi_control_r | m_3_1    | 0x34   | 32    | W      | Data signal of m_3               |                                                                      |
+| s_axi_control_r | m_3_2    | 0x38   | 32    | W      | Data signal of m_3               |                                                                      |
+| s_axi_control_r | m_4_1    | 0x40   | 32    | W      | Data signal of m_4               |                                                                      |
+| s_axi_control_r | m_4_2    | 0x44   | 32    | W      | Data signal of m_4               |                                                                      |
+| s_axi_control_r | m_5_1    | 0x4c   | 32    | W      | Data signal of m_5               |                                                                      |
+| s_axi_control_r | m_5_2    | 0x50   | 32    | W      | Data signal of m_5               |                                                                      |
+| s_axi_control_r | m_6_1    | 0x58   | 32    | W      | Data signal of m_6               |                                                                      |
+| s_axi_control_r | m_6_2    | 0x5c   | 32    | W      | Data signal of m_6               |                                                                      |
+| s_axi_control_r | m_7_1    | 0x64   | 32    | W      | Data signal of m_7               |                                                                      |
+| s_axi_control_r | m_7_2    | 0x68   | 32    | W      | Data signal of m_7               |                                                                      |
+| s_axi_control_r | l_0_1    | 0x70   | 32    | W      | Data signal of l_0               |                                                                      |
+| s_axi_control_r | l_0_2    | 0x74   | 32    | W      | Data signal of l_0               |                                                                      |
+| s_axi_control_r | l_1_1    | 0x7c   | 32    | W      | Data signal of l_1               |                                                                      |
+| s_axi_control_r | l_1_2    | 0x80   | 32    | W      | Data signal of l_1               |                                                                      |
+| s_axi_control_r | l_2_1    | 0x88   | 32    | W      | Data signal of l_2               |                                                                      |
+| s_axi_control_r | l_2_2    | 0x8c   | 32    | W      | Data signal of l_2               |                                                                      |
+| s_axi_control_r | l_3_1    | 0x94   | 32    | W      | Data signal of l_3               |                                                                      |
+| s_axi_control_r | l_3_2    | 0x98   | 32    | W      | Data signal of l_3               |                                                                      |
+| s_axi_control_r | l_4_1    | 0xa0   | 32    | W      | Data signal of l_4               |                                                                      |
+| s_axi_control_r | l_4_2    | 0xa4   | 32    | W      | Data signal of l_4               |                                                                      |
+| s_axi_control_r | l_5_1    | 0xac   | 32    | W      | Data signal of l_5               |                                                                      |
+| s_axi_control_r | l_5_2    | 0xb0   | 32    | W      | Data signal of l_5               |                                                                      |
+| s_axi_control_r | l_6_1    | 0xb8   | 32    | W      | Data signal of l_6               |                                                                      |
+| s_axi_control_r | l_6_2    | 0xbc   | 32    | W      | Data signal of l_6               |                                                                      |
+| s_axi_control_r | l_7_1    | 0xc4   | 32    | W      | Data signal of l_7               |                                                                      |
+| s_axi_control_r | l_7_2    | 0xc8   | 32    | W      | Data signal of l_7               |                                                                      |
+| s_axi_control_r | u_0_1    | 0xd0   | 32    | W      | Data signal of u_0               |                                                                      |
+| s_axi_control_r | u_0_2    | 0xd4   | 32    | W      | Data signal of u_0               |                                                                      |
+| s_axi_control_r | u_1_1    | 0xdc   | 32    | W      | Data signal of u_1               |                                                                      |
+| s_axi_control_r | u_1_2    | 0xe0   | 32    | W      | Data signal of u_1               |                                                                      |
+| s_axi_control_r | u_2_1    | 0xe8   | 32    | W      | Data signal of u_2               |                                                                      |
+| s_axi_control_r | u_2_2    | 0xec   | 32    | W      | Data signal of u_2               |                                                                      |
+| s_axi_control_r | u_3_1    | 0xf4   | 32    | W      | Data signal of u_3               |                                                                      |
+| s_axi_control_r | u_3_2    | 0xf8   | 32    | W      | Data signal of u_3               |                                                                      |
+| s_axi_control_r | u_4_1    | 0x100  | 32    | W      | Data signal of u_4               |                                                                      |
+| s_axi_control_r | u_4_2    | 0x104  | 32    | W      | Data signal of u_4               |                                                                      |
+| s_axi_control_r | u_5_1    | 0x10c  | 32    | W      | Data signal of u_5               |                                                                      |
+| s_axi_control_r | u_5_2    | 0x110  | 32    | W      | Data signal of u_5               |                                                                      |
+| s_axi_control_r | u_6_1    | 0x118  | 32    | W      | Data signal of u_6               |                                                                      |
+| s_axi_control_r | u_6_2    | 0x11c  | 32    | W      | Data signal of u_6               |                                                                      |
+| s_axi_control_r | u_7_1    | 0x124  | 32    | W      | Data signal of u_7               |                                                                      |
+| s_axi_control_r | u_7_2    | 0x128  | 32    | W      | Data signal of u_7               |                                                                      |
++-----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| m        | inout     | float*   |
+| l        | inout     | float*   |
+| u        | inout     | float*   |
+| size     | in        | int      |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+-----------------+-----------+----------+--------------------------------+
+| Argument | HW Interface    | HW Type   | HW Usage | HW Info                        |
++----------+-----------------+-----------+----------+--------------------------------+
+| m        | m_axi_gmem_0    | interface |          |                                |
+| m        | s_axi_control_r | interface | offset   |                                |
+| m        | m_axi_gmem_1    | interface |          |                                |
+| m        | s_axi_control_r | interface | offset   |                                |
+| m        | m_axi_gmem_2    | interface |          |                                |
+| m        | s_axi_control_r | interface | offset   |                                |
+| m        | m_axi_gmem_3    | interface |          |                                |
+| m        | s_axi_control_r | interface | offset   |                                |
+| m        | m_axi_gmem_4    | interface |          |                                |
+| m        | s_axi_control_r | interface | offset   |                                |
+| m        | m_axi_gmem_5    | interface |          |                                |
+| m        | s_axi_control_r | interface | offset   |                                |
+| m        | m_axi_gmem_6    | interface |          |                                |
+| m        | s_axi_control_r | interface | offset   |                                |
+| m        | m_axi_gmem_7    | interface |          |                                |
+| m        | s_axi_control_r | interface | offset   |                                |
+| l        | m_axi_gmem_0    | interface |          |                                |
+| l        | s_axi_control_r | interface | offset   |                                |
+| l        | m_axi_gmem_1    | interface |          |                                |
+| l        | s_axi_control_r | interface | offset   |                                |
+| l        | m_axi_gmem_2    | interface |          |                                |
+| l        | s_axi_control_r | interface | offset   |                                |
+| l        | m_axi_gmem_3    | interface |          |                                |
+| l        | s_axi_control_r | interface | offset   |                                |
+| l        | m_axi_gmem_4    | interface |          |                                |
+| l        | s_axi_control_r | interface | offset   |                                |
+| l        | m_axi_gmem_5    | interface |          |                                |
+| l        | s_axi_control_r | interface | offset   |                                |
+| l        | m_axi_gmem_6    | interface |          |                                |
+| l        | s_axi_control_r | interface | offset   |                                |
+| l        | m_axi_gmem_7    | interface |          |                                |
+| l        | s_axi_control_r | interface | offset   |                                |
+| u        | m_axi_gmem_0    | interface |          |                                |
+| u        | s_axi_control_r | interface | offset   |                                |
+| u        | m_axi_gmem_1    | interface |          |                                |
+| u        | s_axi_control_r | interface | offset   |                                |
+| u        | m_axi_gmem_2    | interface |          |                                |
+| u        | s_axi_control_r | interface | offset   |                                |
+| u        | m_axi_gmem_3    | interface |          |                                |
+| u        | s_axi_control_r | interface | offset   |                                |
+| u        | m_axi_gmem_4    | interface |          |                                |
+| u        | s_axi_control_r | interface | offset   |                                |
+| u        | m_axi_gmem_5    | interface |          |                                |
+| u        | s_axi_control_r | interface | offset   |                                |
+| u        | m_axi_gmem_6    | interface |          |                                |
+| u        | s_axi_control_r | interface | offset   |                                |
+| u        | m_axi_gmem_7    | interface |          |                                |
+| u        | s_axi_control_r | interface | offset   |                                |
+| size     | s_axi_control   | register  |          | name=size offset=0x10 range=32 |
++----------+-----------------+-----------+----------+--------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* All M_AXI Variable Accesses
++--------------+----------+---------------------+-----------+--------------+-----------------+---------------------+------------+-------------------------------------------+
+| HW Interface | Variable | Access Location     | Direction | Burst Status | Loop            | Loop Location       | Resolution | Problem                                   |
++--------------+----------+---------------------+-----------+--------------+-----------------+---------------------+------------+-------------------------------------------+
+| m_axi_gmem_0 | u_0      | decompose.cpp:20:10 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_0 | m_0      | decompose.cpp:20:12 | read      | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_0 | l_0      | decompose.cpp:22:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_0 | l_0      | decompose.cpp:24:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_0 | u_0      | decompose.cpp:34:27 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_0 | u_0      | decompose.cpp:34:17 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-230    | Stride is incompatible                    |
+| m_axi_gmem_0 | l_0      | decompose.cpp:35:21 | write     | Fail         | update_l        | decompose.cpp:32:9  | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_0 | u_0      | decompose.cpp:39:10 | write     | Fail         | update_u        | decompose.cpp:37:13 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_0 | u_0      | decompose.cpp:39:31 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_0 | u_0      | decompose.cpp:39:12 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_1 | u_1      | decompose.cpp:20:10 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_1 | m_1      | decompose.cpp:20:12 | read      | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_1 | l_1      | decompose.cpp:22:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_1 | l_1      | decompose.cpp:24:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_1 | u_1      | decompose.cpp:34:27 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_1 | u_1      | decompose.cpp:34:17 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-230    | Stride is incompatible                    |
+| m_axi_gmem_1 | l_1      | decompose.cpp:35:21 | write     | Fail         | update_l        | decompose.cpp:32:9  | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_1 | u_1      | decompose.cpp:39:10 | write     | Fail         | update_u        | decompose.cpp:37:13 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_1 | u_1      | decompose.cpp:39:31 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_1 | u_1      | decompose.cpp:39:12 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_2 | u_2      | decompose.cpp:20:10 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_2 | m_2      | decompose.cpp:20:12 | read      | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_2 | l_2      | decompose.cpp:22:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_2 | l_2      | decompose.cpp:24:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_2 | u_2      | decompose.cpp:34:27 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_2 | u_2      | decompose.cpp:34:17 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-230    | Stride is incompatible                    |
+| m_axi_gmem_2 | l_2      | decompose.cpp:35:21 | write     | Fail         | update_l        | decompose.cpp:32:9  | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_2 | u_2      | decompose.cpp:39:10 | write     | Fail         | update_u        | decompose.cpp:37:13 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_2 | u_2      | decompose.cpp:39:31 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_2 | u_2      | decompose.cpp:39:12 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_3 | u_3      | decompose.cpp:20:10 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_3 | m_3      | decompose.cpp:20:12 | read      | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_3 | l_3      | decompose.cpp:22:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_3 | l_3      | decompose.cpp:24:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_3 | u_3      | decompose.cpp:34:27 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_3 | u_3      | decompose.cpp:34:17 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-230    | Stride is incompatible                    |
+| m_axi_gmem_3 | l_3      | decompose.cpp:35:21 | write     | Fail         | update_l        | decompose.cpp:32:9  | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_3 | u_3      | decompose.cpp:39:10 | write     | Fail         | update_u        | decompose.cpp:37:13 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_3 | u_3      | decompose.cpp:39:31 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_3 | u_3      | decompose.cpp:39:12 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_4 | u_4      | decompose.cpp:20:10 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_4 | m_4      | decompose.cpp:20:12 | read      | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_4 | l_4      | decompose.cpp:22:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_4 | l_4      | decompose.cpp:24:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_4 | u_4      | decompose.cpp:34:27 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_4 | u_4      | decompose.cpp:34:17 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-230    | Stride is incompatible                    |
+| m_axi_gmem_4 | l_4      | decompose.cpp:35:21 | write     | Fail         | update_l        | decompose.cpp:32:9  | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_4 | u_4      | decompose.cpp:39:10 | write     | Fail         | update_u        | decompose.cpp:37:13 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_4 | u_4      | decompose.cpp:39:31 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_4 | u_4      | decompose.cpp:39:12 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_5 | u_5      | decompose.cpp:20:10 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_5 | m_5      | decompose.cpp:20:12 | read      | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_5 | l_5      | decompose.cpp:22:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_5 | l_5      | decompose.cpp:24:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_5 | u_5      | decompose.cpp:34:27 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_5 | u_5      | decompose.cpp:34:17 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-230    | Stride is incompatible                    |
+| m_axi_gmem_5 | l_5      | decompose.cpp:35:21 | write     | Fail         | update_l        | decompose.cpp:32:9  | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_5 | u_5      | decompose.cpp:39:10 | write     | Fail         | update_u        | decompose.cpp:37:13 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_5 | u_5      | decompose.cpp:39:31 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_5 | u_5      | decompose.cpp:39:12 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_6 | u_6      | decompose.cpp:20:10 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_6 | m_6      | decompose.cpp:20:12 | read      | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_6 | l_6      | decompose.cpp:22:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_6 | l_6      | decompose.cpp:24:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_6 | u_6      | decompose.cpp:34:27 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_6 | u_6      | decompose.cpp:34:17 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-230    | Stride is incompatible                    |
+| m_axi_gmem_6 | l_6      | decompose.cpp:35:21 | write     | Fail         | update_l        | decompose.cpp:32:9  | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_6 | u_6      | decompose.cpp:39:10 | write     | Fail         | update_u        | decompose.cpp:37:13 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_6 | u_6      | decompose.cpp:39:31 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_6 | u_6      | decompose.cpp:39:12 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_7 | u_7      | decompose.cpp:20:10 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_7 | m_7      | decompose.cpp:20:12 | read      | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_7 | l_7      | decompose.cpp:22:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_7 | l_7      | decompose.cpp:24:25 | write     | Fail         | VITIS_LOOP_18_1 | decompose.cpp:18:26 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_7 | u_7      | decompose.cpp:34:27 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_7 | u_7      | decompose.cpp:34:17 | read      | Fail         | update_l        | decompose.cpp:32:9  | 214-230    | Stride is incompatible                    |
+| m_axi_gmem_7 | l_7      | decompose.cpp:35:21 | write     | Fail         | update_l        | decompose.cpp:32:9  | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_7 | u_7      | decompose.cpp:39:10 | write     | Fail         | update_u        | decompose.cpp:37:13 | 214-232    | Access store is in the conditional branch |
+| m_axi_gmem_7 | u_7      | decompose.cpp:39:31 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
+| m_axi_gmem_7 | u_7      | decompose.cpp:39:12 | read      | Fail         | update_u        | decompose.cpp:37:13 | 214-229    | Could not analyze pattern                 |
++--------------+----------+---------------------+-----------+--------------+-----------------+---------------------+------------+-------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                          | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++-----------------------------------------------+-----+--------+-------------+------+---------+---------+
+| + decompose                                   | 40  |        |             |      |         |         |
+|   mul_31ns_31ns_62_2_1_U64                    | 4   |        | mul_ln17    | mul  | auto    | 1       |
+|   add_ln32_fu_1353_p2                         | -   |        | add_ln32    | add  | fabric  | 0       |
+|   add_ln32_5_fu_1397_p2                       | -   |        | add_ln32_5  | add  | fabric  | 0       |
+|   add_ln32_6_fu_1403_p2                       | -   |        | add_ln32_6  | add  | fabric  | 0       |
+|   add_ln32_2_fu_1414_p2                       | -   |        | add_ln32_2  | add  | fabric  | 0       |
+|   mul_44ns_46ns_57_5_1_U65                    | 8   |        | mul_ln30    | mul  | auto    | 4       |
+|   add_ln30_fu_1476_p2                         | -   |        | add_ln30    | add  | fabric  | 0       |
+|   add_ln30_1_fu_1481_p2                       | -   |        | add_ln30_1  | add  | fabric  | 0       |
+|   add_ln30_2_fu_1486_p2                       | -   |        | add_ln30_2  | add  | fabric  | 0       |
+|   add_ln30_3_fu_1491_p2                       | -   |        | add_ln30_3  | add  | fabric  | 0       |
+|   add_ln30_4_fu_1496_p2                       | -   |        | add_ln30_4  | add  | fabric  | 0       |
+|   add_ln30_5_fu_1501_p2                       | -   |        | add_ln30_5  | add  | fabric  | 0       |
+|   add_ln30_6_fu_1506_p2                       | -   |        | add_ln30_6  | add  | fabric  | 0       |
+|   add_ln30_7_fu_1511_p2                       | -   |        | add_ln30_7  | add  | fabric  | 0       |
+|   add_ln32_1_fu_1521_p2                       | -   |        | add_ln32_1  | add  | fabric  | 0       |
+|   mul_64s_13ns_64_5_1_U67                     | 4   |        | mul_ln34    | mul  | auto    | 4       |
+|   add_ln34_fu_1728_p2                         | -   |        | add_ln34    | add  | fabric  | 0       |
+|   add_ln34_1_fu_1748_p2                       | -   |        | add_ln34_1  | add  | fabric  | 0       |
+|   add_ln34_2_fu_1754_p2                       | -   |        | add_ln34_2  | add  | fabric  | 0       |
+|   add_ln34_3_fu_1758_p2                       | -   |        | add_ln34_3  | add  | fabric  | 0       |
+|   add_ln34_4_fu_1764_p2                       | -   |        | add_ln34_4  | add  | fabric  | 0       |
+|   add_ln34_5_fu_1768_p2                       | -   |        | add_ln34_5  | add  | fabric  | 0       |
+|   add_ln34_6_fu_1774_p2                       | -   |        | add_ln34_6  | add  | fabric  | 0       |
+|   add_ln34_7_fu_1778_p2                       | -   |        | add_ln34_7  | add  | fabric  | 0       |
+|   add_ln34_8_fu_1784_p2                       | -   |        | add_ln34_8  | add  | fabric  | 0       |
+|   add_ln34_9_fu_1788_p2                       | -   |        | add_ln34_9  | add  | fabric  | 0       |
+|   add_ln34_10_fu_1794_p2                      | -   |        | add_ln34_10 | add  | fabric  | 0       |
+|   add_ln34_11_fu_1798_p2                      | -   |        | add_ln34_11 | add  | fabric  | 0       |
+|   add_ln34_12_fu_1804_p2                      | -   |        | add_ln34_12 | add  | fabric  | 0       |
+|   add_ln34_13_fu_1808_p2                      | -   |        | add_ln34_13 | add  | fabric  | 0       |
+|   add_ln34_14_fu_1814_p2                      | -   |        | add_ln34_14 | add  | fabric  | 0       |
+|   add_ln34_15_fu_1818_p2                      | -   |        | add_ln34_15 | add  | fabric  | 0       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U63           | -   |        | factor      | fdiv | fabric  | 15      |
+|   mul_64ns_66ns_77_5_1_U66                    | 13  |        | mul_ln37    | mul  | auto    | 4       |
+|   add_ln39_fu_2360_p2                         | -   |        | add_ln39    | add  | fabric  | 0       |
+|   add_ln39_1_fu_2365_p2                       | -   |        | add_ln39_1  | add  | fabric  | 0       |
+|   add_ln39_2_fu_2370_p2                       | -   |        | add_ln39_2  | add  | fabric  | 0       |
+|   add_ln39_3_fu_2375_p2                       | -   |        | add_ln39_3  | add  | fabric  | 0       |
+|   add_ln39_4_fu_2380_p2                       | -   |        | add_ln39_4  | add  | fabric  | 0       |
+|   add_ln39_5_fu_2385_p2                       | -   |        | add_ln39_5  | add  | fabric  | 0       |
+|   add_ln39_6_fu_2390_p2                       | -   |        | add_ln39_6  | add  | fabric  | 0       |
+|   add_ln39_7_fu_2395_p2                       | -   |        | add_ln39_7  | add  | fabric  | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U62           | 3   |        | mul         | fmul | maxdsp  | 3       |
+|   fsub_32ns_32ns_32_5_full_dsp_1_U61          | 2   |        | sub         | fsub | fulldsp | 4       |
+|   add_ln37_fu_2909_p2                         | -   |        | add_ln37    | add  | fabric  | 0       |
+|   add_ln32_4_fu_2339_p2                       | -   |        | add_ln32_4  | add  | fabric  | 0       |
+|   add_ln30_8_fu_1695_p2                       | -   |        | add_ln30_8  | add  | fabric  | 0       |
+|   add_ln32_3_fu_1701_p2                       | -   |        | add_ln32_3  | add  | fabric  | 0       |
+|  + decompose_Pipeline_init_lu_VITIS_LOOP_18_1 | 6   |        |             |      |         |         |
+|    mul_31ns_13ns_43_2_1_U1                    | 2   |        | empty       | mul  | auto    | 1       |
+|    empty_59_fu_1375_p2                        | -   |        | empty_59    | add  | fabric  | 0       |
+|    empty_61_fu_1709_p2                        | -   |        | empty_61    | add  | fabric  | 0       |
+|    empty_62_fu_1380_p2                        | -   |        | empty_62    | add  | fabric  | 0       |
+|    empty_63_fu_1714_p2                        | -   |        | empty_63    | add  | fabric  | 0       |
+|    empty_64_fu_1385_p2                        | -   |        | empty_64    | add  | fabric  | 0       |
+|    empty_65_fu_1719_p2                        | -   |        | empty_65    | add  | fabric  | 0       |
+|    empty_66_fu_1390_p2                        | -   |        | empty_66    | add  | fabric  | 0       |
+|    empty_67_fu_1724_p2                        | -   |        | empty_67    | add  | fabric  | 0       |
+|    empty_68_fu_1395_p2                        | -   |        | empty_68    | add  | fabric  | 0       |
+|    empty_69_fu_1729_p2                        | -   |        | empty_69    | add  | fabric  | 0       |
+|    empty_70_fu_1400_p2                        | -   |        | empty_70    | add  | fabric  | 0       |
+|    empty_71_fu_1734_p2                        | -   |        | empty_71    | add  | fabric  | 0       |
+|    empty_72_fu_1405_p2                        | -   |        | empty_72    | add  | fabric  | 0       |
+|    empty_73_fu_1739_p2                        | -   |        | empty_73    | add  | fabric  | 0       |
+|    empty_74_fu_1410_p2                        | -   |        | empty_74    | add  | fabric  | 0       |
+|    empty_75_fu_1744_p2                        | -   |        | empty_75    | add  | fabric  | 0       |
+|    add_ln17_fu_1020_p2                        | -   |        | add_ln17    | add  | fabric  | 0       |
+|    grp_fu_1040_p0                             | -   |        | add_ln17_1  | add  | fabric  | 0       |
+|    mul_31ns_33ns_44_2_1_U2                    | 4   |        | mul_ln17_1  | mul  | auto    | 1       |
+|    mul_31ns_13ns_43_2_1_U1                    | 2   |        | p_mid1      | mul  | auto    | 1       |
+|    p_mid1299_fu_1418_p2                       | -   |        | p_mid1299   | add  | fabric  | 0       |
+|    p_mid1303_fu_1769_p2                       | -   |        | p_mid1303   | add  | fabric  | 0       |
+|    p_mid1305_fu_1423_p2                       | -   |        | p_mid1305   | add  | fabric  | 0       |
+|    p_mid1307_fu_1786_p2                       | -   |        | p_mid1307   | add  | fabric  | 0       |
+|    p_mid1309_fu_1428_p2                       | -   |        | p_mid1309   | add  | fabric  | 0       |
+|    p_mid1311_fu_1803_p2                       | -   |        | p_mid1311   | add  | fabric  | 0       |
+|    p_mid1313_fu_1433_p2                       | -   |        | p_mid1313   | add  | fabric  | 0       |
+|    p_mid1315_fu_1820_p2                       | -   |        | p_mid1315   | add  | fabric  | 0       |
+|    p_mid1317_fu_1438_p2                       | -   |        | p_mid1317   | add  | fabric  | 0       |
+|    p_mid1319_fu_1837_p2                       | -   |        | p_mid1319   | add  | fabric  | 0       |
+|    p_mid1321_fu_1443_p2                       | -   |        | p_mid1321   | add  | fabric  | 0       |
+|    p_mid1323_fu_1854_p2                       | -   |        | p_mid1323   | add  | fabric  | 0       |
+|    p_mid1325_fu_1448_p2                       | -   |        | p_mid1325   | add  | fabric  | 0       |
+|    p_mid1327_fu_1871_p2                       | -   |        | p_mid1327   | add  | fabric  | 0       |
+|    p_mid1329_fu_1453_p2                       | -   |        | p_mid1329   | add  | fabric  | 0       |
+|    p_mid1331_fu_1888_p2                       | -   |        | p_mid1331   | add  | fabric  | 0       |
+|    mul_31ns_33ns_44_2_1_U2                    | 4   |        | mul_ln18    | mul  | auto    | 1       |
+|    add_ln24_fu_1949_p2                        | -   |        | add_ln24    | add  | fabric  | 0       |
+|    add_ln24_1_fu_1954_p2                      | -   |        | add_ln24_1  | add  | fabric  | 0       |
+|    add_ln24_2_fu_1959_p2                      | -   |        | add_ln24_2  | add  | fabric  | 0       |
+|    add_ln24_3_fu_1964_p2                      | -   |        | add_ln24_3  | add  | fabric  | 0       |
+|    add_ln24_4_fu_1969_p2                      | -   |        | add_ln24_4  | add  | fabric  | 0       |
+|    add_ln24_5_fu_1974_p2                      | -   |        | add_ln24_5  | add  | fabric  | 0       |
+|    add_ln24_6_fu_1979_p2                      | -   |        | add_ln24_6  | add  | fabric  | 0       |
+|    add_ln24_7_fu_1984_p2                      | -   |        | add_ln24_7  | add  | fabric  | 0       |
+|    add_ln18_fu_1068_p2                        | -   |        | add_ln18    | add  | fabric  | 0       |
++-----------------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------------+---------------------------------------+
+| Type            | Options                               | Location                              |
++-----------------+---------------------------------------+---------------------------------------+
+| interface       | m_axi port=m offset=slave bundle=gmem | decompose.cpp:6 in decompose, m       |
+| interface       | m_axi port=l offset=slave bundle=gmem | decompose.cpp:7 in decompose, l       |
+| interface       | m_axi port=u offset=slave bundle=gmem | decompose.cpp:8 in decompose, u       |
+| interface       | s_axilite port=size bundle=control    | decompose.cpp:9 in decompose, size    |
+| interface       | s_axilite port=return bundle=control  | decompose.cpp:10 in decompose, return |
+| array_partition | variable=m block factor=8 dim=2       | decompose.cpp:11 in decompose, m      |
+| array_partition | variable=l block factor=8 dim=2       | decompose.cpp:12 in decompose, l      |
+| array_partition | variable=u block factor=8 dim=2       | decompose.cpp:13 in decompose, u      |
+| pipeline        | II=1                                  | decompose.cpp:19 in decompose         |
+| pipeline        | II=1                                  | decompose.cpp:33 in decompose         |
+| unroll          | factor=2                              | decompose.cpp:38 in decompose         |
++-----------------+---------------------------------------+---------------------------------------+
+
+

@@ -1,0 +1,48 @@
+from pynq import Overlay, allocate
+import numpy as np
+
+# Load the bitstream
+overlay = Overlay('/home/xilinx/decompose.bit')
+
+# Access the IP
+decompose_ip = overlay.decompose_0
+
+# Define matrix size and allocate input/output buffers
+size = 4
+m = allocate(shape=(size, size), dtype=np.float32)
+l = allocate(shape=(size, size), dtype=np.float32)
+u = allocate(shape=(size, size), dtype=np.float32)
+
+# Initialize matrix m with some values
+for i in range(size):
+    for j in range(size):
+        m[i][j] = np.random.rand()
+
+# Write the input matrix to the IP
+for i in range(size):
+    for j in range(size):
+        decompose_ip.write(0x10 + (i*size + j)*4, m[i][j].view(np.uint32))
+
+# Set the size
+decompose_ip.write(0x00, size)
+
+# Start the decomposition process
+decompose_ip.write(0x04, 1)
+
+# Wait for the IP to complete
+while decompose_ip.read(0x04) & 0x1 == 0:
+    pass
+
+# Read the output matrices L and U
+for i in range(size):
+    for j in range(size):
+        l[i][j] = decompose_ip.read(0x20 + (i*size + j)*4).view(np.float32)
+        u[i][j] = decompose_ip.read(0x30 + (i*size + j)*4).view(np.float32)
+
+# Print the matrices for verification
+print("Matrix M:")
+print(m)
+print("Matrix L:")
+print(l)
+print("Matrix U:")
+print(u)

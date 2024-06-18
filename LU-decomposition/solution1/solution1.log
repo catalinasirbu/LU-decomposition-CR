@@ -1,0 +1,219 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -argv 1000 -setup -quiet 
+WARNING: [HLS 200-1998] cannot find relative file path '../../test.cpp' in directory(s): C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution C:/Users/catal/Vivado/LU-decomposition
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [HLS 200-2035] Skipping execution of C Simulation due to 'setup' option
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.662 seconds; current allocated memory: 0.410 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -argv 1000 -clean -O -setup -quiet 
+WARNING: [HLS 200-1998] cannot find relative file path '../../test.cpp' in directory(s): C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution C:/Users/catal/Vivado/LU-decomposition
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building optimized C Simulation binaries
+INFO: [HLS 200-2035] Skipping execution of C Simulation due to 'setup' option
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.607 seconds; current allocated memory: 0.418 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csim_design -argv 1000 -setup -quiet 
+WARNING: [HLS 200-1998] cannot find relative file path '../../test.cpp' in directory(s): C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution C:/Users/catal/Vivado/LU-decomposition
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [HLS 200-2035] Skipping execution of C Simulation due to 'setup' option
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.606 seconds; current allocated memory: 0.426 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-1998] cannot find relative file path '../../test.cpp' in directory(s): C:/Users/catal/Vivado/LU-decomposition/LU-decomposition/solution C:/Users/catal/Vivado/LU-decomposition
+WARNING: [HLS 200-40] Cannot find source file main.cpp; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 96.543 MB.
+INFO: [HLS 200-10] Analyzing design file 'decompose.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.033 seconds; current allocated memory: 97.750 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'update_u' is marked as complete unroll implied by the pipeline pragma (decompose.cpp:37:13)
+INFO: [HLS 214-248] Applying array_partition to 'm': Block partitioning with factor 8 on dimension 2. (decompose.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'l': Block partitioning with factor 8 on dimension 2. (decompose.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'u': Block partitioning with factor 8 on dimension 2. (decompose.cpp:5:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.245 seconds; current allocated memory: 100.621 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 100.621 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.227 seconds; current allocated memory: 107.195 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 108.926 MB.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'update_l' (decompose.cpp:32) in function 'decompose' for pipelining.
+WARNING: [HLS 200-932] Cannot unroll loop 'update_u' (decompose.cpp:37) in function 'decompose' completely: variable loop bound.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.287 seconds; current allocated memory: 133.125 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'init_lu' (decompose.cpp:17:5) in function 'decompose'.
+WARNING: [HLS 200-960] Cannot flatten loop 'update_l' (decompose.cpp:32:9) in function 'decompose' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'lu_decompose' (decompose.cpp:30:5) in function 'decompose' the outer loop is not a perfect loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.376 seconds; current allocated memory: 140.645 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'decompose' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'init_lu_VITIS_LOOP_18_1'.
+WARNING: [HLS 200-885] The II Violation in module 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1' (loop 'init_lu_VITIS_LOOP_18_1'): Unable to schedule bus request operation ('gmem_6_addr_8_req', decompose.cpp:24) on port 'gmem_6' (decompose.cpp:24) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 55, loop 'init_lu_VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.392 seconds; current allocated memory: 151.246 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.118 seconds; current allocated memory: 152.352 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'decompose' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'update_l': contains subloop(s) that are not unrolled or flattened.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.686 seconds; current allocated memory: 158.984 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.379 seconds; current allocated memory: 159.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'init_lu_VITIS_LOOP_18_1' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1' pipeline 'init_lu_VITIS_LOOP_18_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_31ns_13ns_43_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_31ns_33ns_44_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_8_3_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_31ns_11ns_10_35_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decompose_Pipeline_init_lu_VITIS_LOOP_18_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.543 seconds; current allocated memory: 165.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'decompose' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_4' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_5' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_6' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/gmem_7' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_4' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_5' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_6' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/m_7' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_4' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_5' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_6' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/l_7' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_4' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_5' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_6' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/u_7' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'decompose/size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'decompose' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'size' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Bundling port 'm_0', 'm_1', 'm_2', 'm_3', 'm_4', 'm_5', 'm_6', 'm_7', 'l_0', 'l_1', 'l_2', 'l_3', 'l_4', 'l_5', 'l_6', 'l_7', 'u_0', 'u_1', 'u_2', 'u_3', 'u_4', 'u_5', 'u_6' and 'u_7' to AXI-Lite port control_r.
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_31ns_31ns_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_44ns_46ns_57_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_77_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_13ns_64_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_8_3_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_44ns_11ns_10_48_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_11ns_10_68_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'decompose'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.786 seconds; current allocated memory: 183.355 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.841 seconds; current allocated memory: 196.648 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 6.296 seconds; current allocated memory: 211.621 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for decompose.
+INFO: [VLOG 209-307] Generating Verilog RTL for decompose.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 24 seconds. CPU system time: 2 seconds. Elapsed time: 35.541 seconds; current allocated memory: 115.316 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/catal/Vivado/LU-decomposition/LU-decomposition
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -output C:/Users/catal/Vivado/LU-decomposition/LU-decomposition 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/catal/Vivado/LU-decomposition/LU-decomposition 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file LU-decomposition/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 54.463 seconds; current allocated memory: 16.605 MB.

@@ -1,0 +1,2130 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: decompose.cpp, Line: 37, Column: 13 }
+Function:        decompose
+Args:            
+  - String:          'Loop '''
+  - LoopName:        update_u
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+Function:        decompose
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          m
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+Function:        decompose
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          l
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+Function:        decompose
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          u
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Block
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.load.37
+  - ArrayName:       m_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.load.38
+  - ArrayName:       m_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.load.39
+  - ArrayName:       m_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.load.40
+  - ArrayName:       m_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.load.41
+  - ArrayName:       m_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.load.42
+  - ArrayName:       m_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.load.43
+  - ArrayName:       m_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.load.44
+  - ArrayName:       m_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1083.case.6.store.0
+  - ArrayName:       u_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1083.case.5.store.0
+  - ArrayName:       u_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1083.case.4.store.0
+  - ArrayName:       u_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1083.case.3.store.0
+  - ArrayName:       u_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1083.case.2.store.0
+  - ArrayName:       u_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1083.case.1.store.0
+  - ArrayName:       u_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1083.case.0.store.0
+  - ArrayName:       u_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 20, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1083.case.7.store.0
+  - ArrayName:       u_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1994.case.6.store.0
+  - ArrayName:       l_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx15101.case.6.store.0
+  - ArrayName:       l_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1994.case.5.store.0
+  - ArrayName:       l_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx15101.case.5.store.0
+  - ArrayName:       l_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1994.case.4.store.0
+  - ArrayName:       l_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx15101.case.4.store.0
+  - ArrayName:       l_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1994.case.3.store.0
+  - ArrayName:       l_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx15101.case.3.store.0
+  - ArrayName:       l_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1994.case.2.store.0
+  - ArrayName:       l_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx15101.case.2.store.0
+  - ArrayName:       l_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1994.case.1.store.0
+  - ArrayName:       l_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx15101.case.1.store.0
+  - ArrayName:       l_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1994.case.0.store.0
+  - ArrayName:       l_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx15101.case.0.store.0
+  - ArrayName:       l_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 24, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx1994.case.7.store.0
+  - ArrayName:       l_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 22, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx15101.case.7.store.0
+  - ArrayName:       l_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:18:26'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.13
+  - ArrayName:       u_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.30
+  - ArrayName:       u_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.14
+  - ArrayName:       u_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.31
+  - ArrayName:       u_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.15
+  - ArrayName:       u_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.32
+  - ArrayName:       u_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.16
+  - ArrayName:       u_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.33
+  - ArrayName:       u_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.17
+  - ArrayName:       u_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.34
+  - ArrayName:       u_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.18
+  - ArrayName:       u_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.35
+  - ArrayName:       u_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.19
+  - ArrayName:       u_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.36
+  - ArrayName:       u_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 12 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.20
+  - ArrayName:       u_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          for.inc61.load.37
+  - ArrayName:       u_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx5249.case.6.store.0
+  - ArrayName:       u_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx5249.case.5.store.0
+  - ArrayName:       u_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx5249.case.4.store.0
+  - ArrayName:       u_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx5249.case.3.store.0
+  - ArrayName:       u_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx5249.case.2.store.0
+  - ArrayName:       u_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx5249.case.1.store.0
+  - ArrayName:       u_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx5249.case.0.store.0
+  - ArrayName:       u_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 39, Column: 10 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx5249.case.7.store.0
+  - ArrayName:       u_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        update_u
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:37:13'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+Function:        decompose
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.18
+  - ArrayName:       u_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.27
+  - ArrayName:       u_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+Function:        decompose
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.19
+  - ArrayName:       u_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.28
+  - ArrayName:       u_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+Function:        decompose
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.20
+  - ArrayName:       u_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.29
+  - ArrayName:       u_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+Function:        decompose
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.21
+  - ArrayName:       u_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.30
+  - ArrayName:       u_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+Function:        decompose
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.22
+  - ArrayName:       u_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.31
+  - ArrayName:       u_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+Function:        decompose
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.23
+  - ArrayName:       u_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.32
+  - ArrayName:       u_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+Function:        decompose
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.24
+  - ArrayName:       u_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.33
+  - ArrayName:       u_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+Function:        decompose
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.25
+  - ArrayName:       u_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+Function:        decompose
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: decompose.cpp, Line: 34, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body48.lr.ph.load.34
+  - ArrayName:       u_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx4338.case.6.store.0
+  - ArrayName:       l_6
+  - String:          ' '
+  - BundleName:      gmem_6
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx4338.case.5.store.0
+  - ArrayName:       l_5
+  - String:          ' '
+  - BundleName:      gmem_5
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx4338.case.4.store.0
+  - ArrayName:       l_4
+  - String:          ' '
+  - BundleName:      gmem_4
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx4338.case.3.store.0
+  - ArrayName:       l_3
+  - String:          ' '
+  - BundleName:      gmem_3
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx4338.case.2.store.0
+  - ArrayName:       l_2
+  - String:          ' '
+  - BundleName:      gmem_2
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx4338.case.1.store.0
+  - ArrayName:       l_1
+  - String:          ' '
+  - BundleName:      gmem_1
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx4338.case.0.store.0
+  - ArrayName:       l_0
+  - String:          ' '
+  - BundleName:      gmem_0
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+Function:        decompose
+Args:            
+  - String:          'Access '
+  - Access:          store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: decompose.cpp, Line: 35, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          arrayidx4338.case.7.store.0
+  - ArrayName:       l_7
+  - String:          ' '
+  - BundleName:      gmem_7
+  - String:          ' '
+  - LoopName:        update_l
+  - String:          ' '
+  - LoopLoc:         'decompose.cpp:32:9'
+  - String:          ' '
+  - Function:        decompose
+    DebugLoc:        { File: decompose.cpp, Line: 5, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: decompose.cpp, Line: 37, Column: 13 }
+Function:        decompose
+Args:            
+  - String:          'Loop '''
+  - LoopName:        update_u
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: decompose.cpp, Line: 37, Column: 13 }
+Function:        decompose
+Args:            
+  - String:          'Loop '''
+  - LoopName:        update_u
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
